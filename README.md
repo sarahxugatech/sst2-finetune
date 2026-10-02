@@ -10,6 +10,8 @@ The code demonstrates an end-to-end, reproducible Hugging Face training workflow
 
 ## Results
 
+**Test accuracy: 90.48% (3 epochs, lr=2e-5)**
+
 - Held-out labeled evaluation accuracy: **90.48%** (789/872 correct)
 - Confusion matrix: `[[379, 49], [34, 410]]`
 - Model-selection accuracy by epoch: 94.30%, 95.10%, 95.10%
@@ -23,6 +25,15 @@ One-epoch learning-rate ablation:
 | `1e-5` | 93.08% |
 | `2e-5` | **94.48%** |
 | `1e-4` | 94.30% |
+
+## Training Configuration
+
+| Setting | Value |
+|---|---|
+| Model | `distilbert-base-uncased` |
+| Epochs | 3 |
+| Train / evaluation batch size | 16 / 64 |
+| Learning rate | `2e-5` |
 
 ## How to Run
 
